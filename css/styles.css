@@ -1,17 +1,17 @@
 /* css-01-variaveis-globais */
 :root {
-  --primary-color: #00b894;
-  --primary-dark: #019477;
-  --secondary-color: #2d3436;
-  --background-color: #f0f2f5;
-  --card-color: #ffffff;
-  --text-color: #333333;
-  --muted-color: #636e72;
-  --danger-color: #d63031;
-  --water-color: #0984e3;
-  --border-color: #dfe6e9;
+    --primary-color: #00b894;
+    --primary-dark: #019477;
+    --secondary-color: #2d3436;
+    --background-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --muted-color: #636e72;
+    --danger-color: #d63031;
+    --water-color: #0984e3;
+    --border-color: #dfe6e9;
 
-  --shadow-md: 0 10px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -134,7 +134,7 @@ main {
 }
 
 .tool-container-title h2 {
-    color var(--secondary-color);
+    color: var(--secondary-color);
     font-size: 1.8rem;
 }
 
@@ -155,12 +155,19 @@ main {
     color: var(--secondary-color);
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     padding: 0.8rem;
     border: 2px solid var(--border-color);
     border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 .action-btn {
@@ -174,5 +181,25 @@ main {
     font-family: inherit;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-back {
+    background-color: var(--muted-color);
+}
+
+.btn-back:hover {
+    background-color: var(--secondary-color);
+}
+
+.result-box {
+    padding: 1.25rem;
+    background-color: #e8f8f5;
+    border-radius: 10px;
     text-align: center;
 }
