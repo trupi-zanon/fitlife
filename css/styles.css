@@ -10,6 +10,8 @@
     --danger-color: #d63031;
     --water-color: #0984e3;
     --border-color: #dfe6e9;
+    --water-dark: #00008B;
+    --danger-dark: #b71c1c;
 
     --shadow-md: 0 10px 10px rgba(0, 0, 0, 0.05);
 }
@@ -202,4 +204,11 @@ main {
     background-color: #e8f8f5;
     border-radius: 10px;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
