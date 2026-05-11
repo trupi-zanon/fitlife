@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/water.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -38,20 +39,19 @@
                 <h2><i class="fas fa-tint"></i>
                     Hidratação
                 </h2>
+                <p>Meta diária: 2500ml</p>
             </div>
-            <p>Meta diária: 2500ml</p>
 
-            <div>
-                <button type="button">250 ml</button>
-                <button type="button">Zerar</button>
-
-                <div>
-                    <p>Progresso</p>
-                </div>
-
-                <p>Total: <span>0</span> ml</p>
-
+            <div class="water-controls">
+                <button class="action-btn btn-water-add" type="button">250 ml</button>
+                <button class="action-btn btn-water-reset" type="button">Zerar</button>
             </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">0%</div>
+            </div>
+
+            <p>Total: <span>0</span> ml</p>
 
             <a class="action-btn btn-back" href="../index.html">Voltar</a>
         </section>
