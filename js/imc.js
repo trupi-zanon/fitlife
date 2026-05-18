@@ -11,7 +11,9 @@ function calculateIMC(event) {
     const weight = parseInt(weightInput.value);
     const height = parseFloat(heightInput.value);
 
-    if (weight <= 0 || height <= 0) {
+    console.log("O peso é um número:", !isNaN(weight));
+
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
         alert("Por favor, preencha peso e altura com valores válidos.");
         return;
     }
@@ -24,14 +26,25 @@ function calculateIMC(event) {
     if (imc < 18.5) {
         classification = 'Abaixo do peso';
         color = '#e67e22';
+    } else if (imc < 24.9) {
+        classification = 'Peso normal';
+        color = '#00b894';
+    } else if (imc < 29.9) {
+        classification = 'Sobrepeso';
+        color = '#e67e22';
+    } else {
+        classification = 'Obesidade';
+        color = '#d63031';
     }
 
 
 
-    valueText.innerText = imc;
+    valueText.innerText = imc.toFixed(2);
     valueText.style.color = color;
 
     descText.innerText = classification;
     descText.style.color = color;
+
+    resultBox.classList.add('show');
 
 }
